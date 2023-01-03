@@ -1,0 +1,183 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+class score{
+    int a, b;
+    public:
+    score(int x, int y){
+        a=x;
+        b=y;
+    }
+    score(){}
+    void display(){
+        cout<<"Your final score is "<<a<<"/"<<b;
+    }
+    // score easy();
+};
+score easy(){
+    int a;
+    int count=0;
+    string A;
+    a=1;
+    int n=0;
+    abc:
+    switch(a){
+        case 1:
+        cout<<"I hide my treasure in the ground, my tail is big and fluffy. If you spot me in a tree, please don't call me Scruffy. What am I?"<<endl;
+        cout<<"1. Mouse   "<<"2. Squirrel"<<endl;
+        cout<<"3. Hamster "<<"4. Sloth"<<endl;
+        cout<<"Answer :";
+        cin>>A;
+        if(A=="squirrel" || A=="Squirrel"){
+            cout<<"Correct"<<endl;
+            n++;
+            a++;
+            count++;
+        }
+        else{
+            cout<<"Incorrect Answer"<<endl<<"The correct answer was Squirrel"<<endl;
+            a++;
+            count++;
+        }
+        cout<<"Do you want to play again(y/n) :";
+        cin>>A;
+        if(A=="y")
+        goto abc;
+        break;
+        case 2:
+        cout<<"It takes me two weeks to digest my food, but then again I am not noted for being fast. What am I?"<<endl;
+        cout<<"1. Sloth   "<<"2. Snail"<<endl;
+        cout<<"3. Rabbit  "<<"4. Cow"<<endl;
+        cout<<"Answer :";
+        cin>>A;
+        if(A=="Sloth" || A=="sloth"){
+            cout<<"Correct answer"<<endl;
+            count++;
+            a++;
+            n++;
+        }
+        else{
+            cout<<"Incorrect answer"<<endl<<"The correct answer was Sloth"<<endl;
+            a++;
+            count++;
+        }
+        cout<<"Do you want to play again(y/n) :";
+        cin>>A;
+        if(A=="y")
+        goto abc;
+        break;
+        case 3:
+        cout<<"The alphabet goes from A to Z but I go from Z to A. What am I?"<<endl;
+        cout<<"1. Horse   "<<"2. Zebra"<<endl;
+        cout<<"3. Zebu    "<<"4. Donkey"<<endl;
+        cout<<"Answer :";
+        cin>>A;
+        if(A=="Zebra" || A=="zebra"){
+            cout<<"Correct answer"<<endl;
+            count++;
+            a++;
+            n++;
+        }
+        else{
+            cout<<"Incorrect answer"<<endl<<"The correct answer was Zebra"<<endl;
+            a++;
+            count++;
+        }
+        cout<<"Do you want to play again(y/n) :";
+        cin>>A;
+        if(A=="y")
+        goto abc;
+        break;
+        case 4:
+        cout<<"I live upside down. I see with my ears and not use my eyes, and on Haloween I will give you a big surprise. What am I?"<<endl;
+        cout<<"1. Elephant  "<<"2. Butterfly"<<endl;
+        cout<<"3. Bat       "<<"4. Sloth"<<endl;
+        cout<<"Answer :";
+        cin>>A;
+        if(A=="Bat" || A=="bat"){
+            cout<<"Correct answer"<<endl;
+            count++;
+            a++;
+            n++;
+        }
+        else{
+            cout<<"Incorrect answer"<<endl<<"The correct answer was Bat"<<endl;
+            a++;
+            count++;
+        }
+        cout<<"Do you want to play again(y/n) :";
+        cin>>A;
+        if(A=="y")
+        goto abc;
+        break;
+        case 5:
+        cout<<"I am born pink but later I turn to black and white. What am I?"<<endl;
+        cout<<"1. Elephant  "<<"2. Zebra"<<endl;
+        cout<<"3. Penguin   "<<"4. Panda"<<endl;
+        cout<<"Answer :";
+        cin>>A;
+        if(A=="Panda" || A=="panda"){
+            cout<<"Correct answer"<<endl;
+            count++;
+            a++;
+            n++;
+        }
+        else{
+            cout<<"Incorrect answer"<<endl<<"The correct answer was Panda"<<endl;
+            a++;
+            count++;
+        }
+        break;
+    }
+    score S(n,count);
+    return S;
+}
+int main(){
+    score S;
+    start:
+    cout<<"Welcome to Animal Riddle Game :";
+    cout<<"Enter the difficulty you want to play in "<<endl<<"1 for Easy"<<endl<<"2 for Hard"<<endl;
+    cout<<"Enter your choice :";
+    int a;
+    cin>>a;
+    if(a==1){
+        st:
+        cout<<"You have chosen Easy mode"<<endl<<"In Easy Mode you will get a riddle of an animal and you will also get options to help you guess the animal"<<endl;
+        cout<<"Do you want to continue (y/n) :";
+        string A;
+        cin>>A;
+        if(A=="y"){
+        S=easy();
+        }
+        else if(A=="n")
+        goto start;
+        else{
+            cout<<"Error try again";
+            goto st;
+        }
+    }
+    else if(a==2){
+        sta:
+        cout<<"You have chosen Hard mode"<<endl<<"In Hard Mode you will get a riddle for an animal but you will get no options"<<endl;
+        cout<<"Do you want to continue (y/n) :";
+        string B;
+        cin>>B;
+        if(B=="y")
+        goto hard;
+        else if(B=="n")
+        goto start;
+        else{
+            cout<<"Error try again";
+            goto sta;
+        }
+    }
+    else{
+        cout<<"Error in value try again";
+        goto start;
+    }
+    S.display();
+    end:
+    cout<<"start";
+    hard:
+    cout<<"Start";
+}
